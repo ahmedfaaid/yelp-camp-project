@@ -5,7 +5,7 @@
 A camping ground information and review website built with NodeJs and MongoDB as the database using RESTful routing and CRUD.
 
 ## Routes
-__ These routes have been implemented so far
+*These routes have been implemented so far*
 - Landing (get)
 - **INDEX** /campgrounds (get)
 - **CREATE** /campgrounds (post)
