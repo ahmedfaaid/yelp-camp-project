@@ -36,4 +36,4 @@ Most styling is done by Bootstrap with a little bit of custom css
 
 ## What Next?
 
-``**Authentication** with Passport``
+``Authentication with Passport``
