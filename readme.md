@@ -27,8 +27,6 @@ A camping ground information and review website built with NodeJs and MongoDB as
 - EJS
 - Body-Parser
 - Mongoose
-
-*These are technologies & technologies yet to be implemented*
 - Passport & Passport Local
 - Express-Session
 
@@ -36,4 +34,4 @@ Most styling is done by Bootstrap with a little bit of custom css
 
 ## What Next?
 
-``Authentication with Passport``
+``Update and Destroy``
