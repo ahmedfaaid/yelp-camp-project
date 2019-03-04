@@ -31,7 +31,9 @@ router.post('/register', function (req, res) {
 
 // login
 router.get('/login', function (req, res) {
-    res.render('login');
+    res.render('login', {
+        message: req.flash("error")
+    });
 });
 // login logic
 router.post(

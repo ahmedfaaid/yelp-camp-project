@@ -29,9 +29,11 @@ A camping ground information and review website built with NodeJs and MongoDB as
 - Mongoose
 - Passport & Passport Local
 - Express-Session
+- Method-Override
+- Connect-Flash
 
 Most styling is done by Bootstrap with a little bit of custom css
 
 ## What Next?
 
-``Update and Destroy``
+``UI Improvements``
