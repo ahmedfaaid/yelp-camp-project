@@ -1,20 +1,22 @@
+require('dotenv').config();
+
 var express = require('express'),
-    app = express(),
-    bodyParser = require('body-parser'),
-    mongoose = require('mongoose'),
-    passport = require('passport'),
-    flash = require('connect-flash'),
-    LocalStrategy = require('passport-local'),
-    methodOverride = require('method-override'),
-    Campground = require('./models/campground'),
-    Comment = require('./models/comment'),
-    User = require('./models/user'),
-    seedDB = require('./seeds'),
-    PORT = process.env.PORT || 5000;
+  app = express(),
+  bodyParser = require('body-parser'),
+  mongoose = require('mongoose'),
+  passport = require('passport'),
+  flash = require('connect-flash'),
+  LocalStrategy = require('passport-local'),
+  methodOverride = require('method-override'),
+  Campground = require('./models/campground'),
+  Comment = require('./models/comment'),
+  User = require('./models/user'),
+  seedDB = require('./seeds'),
+  PORT = process.env.PORT || 5000;
 
 var commentRoutes = require('./routes/comments'),
-    campgroundRoutes = require('./routes/campgrounds'),
-    indexRoutes = require('./routes/index');
+  campgroundRoutes = require('./routes/campgrounds'),
+  indexRoutes = require('./routes/index');
 
 mongoose.connect('mongodb://localhost:27017/yelp_camp', {
   useNewUrlParser: true
@@ -29,6 +31,8 @@ app.use(express.static(__dirname + '/public'));
 app.use(methodOverride("_method"));
 app.use(flash());
 // seedDB(); //seed database
+
+app.locals.moment = require('moment');
 
 // passport configuration and strategy
 app.use(
@@ -45,6 +49,8 @@ passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 app.use(function (req, res, next) {
   res.locals.currentUser = req.user;
+  res.locals.error = req.flash("error");
+  res.locals.success = req.flash("success");
   next();
 });
 
