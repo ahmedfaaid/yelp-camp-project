@@ -37,3 +37,7 @@ Most styling is done by Bootstrap with a little bit of custom css
 ## What Next?
 
 ``UI Improvements``
+
+# Acknowlegement
+
+This project was originally designed and developed by Colt Steele for his Web Development Bootcamp on Udemy. This version was developed by Ahmed Alhassan as the final project for that same course.
