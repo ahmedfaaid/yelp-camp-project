@@ -21,9 +21,6 @@ var commentRoutes = require('./routes/comments'),
 mongoose.connect(process.env.DATABASEURL, {
 	useNewUrlParser: true
 });
-// mongoose.connect('mongodb+srv://ahmedfaaid:yasmine@cluster0-tpwbb.mongodb.net/yelp_camp?retryWrites=true', {
-//   useNewUrlParser: true
-// });
 process.emit.databaseURL;
 app.use(
 	bodyParser.urlencoded({
